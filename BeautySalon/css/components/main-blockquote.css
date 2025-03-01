@@ -1,0 +1,34 @@
+.main-blockquote {
+  padding: 3.2rem;
+  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.08);
+  border-radius: 0.4rem;
+}
+
+.main-blockquote .paragraph {
+  position: relative;
+  text-indent: 3rem;
+  margin-bottom: 2.4rem;
+  color: var(--title-color);
+}
+
+.main-blockquote .paragraph span {
+  font: 700 4rem serif;
+  position: absolute;
+  top: -1rem;
+  left: -2.5rem;
+  color: var(--base-color);
+}
+
+.main-blockquote .cite {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-style: normal;
+}
+
+.main-blockquote .cite img {
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  clip-path: circle();
+}

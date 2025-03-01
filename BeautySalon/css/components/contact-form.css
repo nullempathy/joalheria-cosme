@@ -1,0 +1,73 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 80rem; /* Altere o max-width para aumentar a largura */
+  min-width: 40rem; /* Adicione o min-width para garantir que não fique estreito */
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .main-button {
+  display: block;
+  width: 100%;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-label {
+  font-size: 1.6rem;
+  color: var(--title-color);
+  font-family: var(--title-font);
+}
+
+.form-input,
+.form-textarea {
+  padding: 1.4rem; /* Aumenta o padding dentro dos campos */
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+  color: #333;
+  background-color: #f8f9fa;
+  transition: border-color 0.3s;
+  width: 100%; /* Garante que os campos ocupem toda a largura disponível */
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--base-color);
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Responsividade */
+@media (min-width: 992px) {
+  .contact-form {
+    max-width: 90rem; /* Aumenta a largura em telas maiores */
+    padding: 5rem; /* Aumenta o padding para telas maiores */
+  }
+
+  .form-field {
+    gap: 1rem;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 1.3rem; /* Aumenta o tamanho da fonte para telas grandes */
+  }
+}

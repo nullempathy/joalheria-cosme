@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- PAGE INFO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeautySalon</title>
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="./assets/fonts/style.css" />
+
+    <!-- SWIPER -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="main-header" id="header">
+      <nav class="main-nav main-container">
+        <a class="main-logo" href="#home" lang="en">
+          beauty<span class="salon">salon</span>.
+        </a>
+
+        <!-- menu -->
+        <div class="menu">
+          <ul class="list grid-gap">
+            <li>
+              <a class="main-action main-title" href="#home">Início</a>
+            </li>
+            <li>
+              <a class="main-action main-title" href="#about">Sobre</a>
+            </li>
+            <li>
+              <a class="main-action main-title" href="#services">Serviços</a>
+            </li>
+            <li>
+              <a class="main-action main-title" href="#testimonials"
+                >Depoimentos</a
+              >
+            </li>
+            <li>
+              <a class="main-action main-title" href="#contact">Contato</a>
+            </li>
+          </ul>
+        </div>
+
+        <i class="main-icon icon-menu toggle"></i>
+        <i class="main-icon icon-close toggle"></i>
+        <!-- /menu -->
+      </nav>
+    </header>
+
+    <main>
+      <!-- HOME -->
+      <section class="main-section main-home" id="home">
+        <div class="main-container grid-gap">
+          <div class="main-image">
+            <img
+              src="./assets/images2/boa.png"
+              alt="Mulher sorrindo penteando outra mulher"
+            />
+          </div>
+          <div class="text">
+            <h2 class="main-title">Brilho e Elegância para suas Joias</h2>
+            <p class="paragraph">
+              Dê uma nova vida às suas peças favoritas com nossos serviços especializados em restauração e limpeza de joias. Cuidamos de cada detalhe para preservar o valor e a beleza das suas joias preciosas.
+            </p>
+            <a class="main-button" href="#">Solicitar Serviço</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="main-divider -one"></div>
+
+      <!-- SERVICES -->
+      <section class="main-section main-services" id="services">
+        <div class="main-container grid-gap">
+          <header class="header">
+            <h2 class="main-title">Serviços</h2>
+            <p class="subtitle">
+              Com mais de 10 anos no mercado, o <strong>Beautysalon</strong> já
+              conquistou clientes de inúmeros países com seus tratamentos
+              exclusivos e totalmente naturais
+            </p>
+          </header>
+          <div class="cards grid-gap">
+            <div class="card">
+              <i class="main-icon fa-solid fa-hammer"></i>
+              <h3 class="main-title">Restauração</h3>
+              <p>
+                Seu colar, anel ou pulseira perdeu o brilho e apresenta sinais do tempo? Nossa equipe realiza uma restauração completa para devolver a elegância original de suas peças, mantendo toda a autenticidade e sofisticação.
+              </p>
+            </div>
+            <div class="card">
+              <i class="main-icon fa-solid fa-hand-sparkles"></i>
+              <h3 class="main-title">Limpeza Profissional</h3>
+              <p>
+                Removemos impurezas e resquícios acumulados ao longo do tempo, recuperando o brilho e a beleza das suas joias com um processo seguro e eficiente.
+              </p>
+            </div>
+            <div class="card">
+              <i class="main-icon fa-solid fa-sack-dollar"></i>
+              <h3 class="main-title">Orçamento Personalizado</h3>
+              <p>
+                Possui uma peça especial ou um serviço específico em mente? Entre em contato para um orçamento sob medida e descubra como podemos atender suas necessidades.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="main-divider -two"></div>
+
+      <!-- CONTACT -->
+      <section class="main-section main-contact" id="contact">
+        <div class="main-container grid-gap">
+          <div class="text">
+            <h2 class="main-title">Entre em contato com a gente</h2>
+            <p class="paragraph">
+              Entre em contato e traga suas joias para um cuidado profissional! Seu brilho merece ser preservado.
+            </p>
+            <a
+              href="https://api.whatsapp.com/send?phone=+5511998456754&text=Oi! Gostaria de agendar um horário"
+              class="main-button"
+              target="_blank"
+            >
+              <i class="main-icon icon-whatsapp"></i>Entrar em contato
+            </a>
+          </div>
+
+          <form id="contato" class="contact-form">
+            <div class="form-field">
+              <label for="nome" class="form-label">Nome:</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required aria-required="true" class="form-input">
+            </div>
+          
+            <div class="form-field">
+              <label for="email" class="form-label">E-mail:</label>
+              <input type="email" id="email" name="email" placeholder="Seu e-mail" required aria-required="true" class="form-input">
+            </div>
+          
+            <div class="form-field">
+              <label for="assunto" class="form-label">Assunto:</label>
+              <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required aria-required="true" class="form-input">
+            </div>
+          
+            <div class="form-field">
+              <label for="mensagem" class="form-label">Mensagem:</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required aria-required="true" class="form-textarea"></textarea>
+            </div>
+          
+            <div class="form-submit">
+              <button type="submit" class="main-button" aria-label="Enviar mensagem do formulário">Enviar Email</button>
+            </div>
+          </form>
+          
+          
+        </div>
+      </section>
+
+      <div class="main-divider -one"></div>
+    </main>
+
+    <footer class="main-section main-footer">
+      <div class="main-container grid-gap">
+        <div class="brand">
+          <a class="main-logo -alt" href="#home" lang="en">
+            beauty<span class="salon">salon</span>.
+          </a>
+          <p class="paragraph">©2025 Beautysalon.</p>
+          <p class="paragraph">Todos os direitos reservados.</p>
+        </div>
+        <div class="social">
+          <a class="link" href="https://instagram.com" target="_blank">
+            <i class="main-icon icon-instagram"></i>
+          </a>
+          <a class="link" href="https://facebook.com" target="_blank">
+            <i class="main-icon icon-facebook"></i>
+          </a>
+          <a class="link" href="https://youtube.com" target="_blank">
+            <i class="main-icon icon-youtube"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <a class="main-backToTop" href="#home">
+      <i class="main-icon icon-rocket"></i>
+    </a>
+
+    <!-- SWIPER -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- SCROLLREVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- MAIN JS -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./index.js"></script>
+    <script src="./send-email.js"></script>
+  </body>
+</html>

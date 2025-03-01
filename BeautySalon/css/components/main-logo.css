@@ -1,0 +1,12 @@
+.main-logo {
+  font: 700 2.1rem var(--title-font);
+  color: var(--title-color);
+}
+
+.main-logo .salon {
+  color: var(--base-color);
+}
+
+.main-logo.-alt .salon {
+  color: var(--body-color);
+}

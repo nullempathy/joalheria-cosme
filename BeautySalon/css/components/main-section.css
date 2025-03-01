@@ -1,0 +1,35 @@
+.main-section {
+  padding: calc(var(--header-height) + 8rem) 0rem;
+}
+
+.main-section .main-title {
+  margin-bottom: 1.6rem;
+}
+
+.main-section .subtitle {
+  font-size: var(--subtitle-font-size);
+}
+
+.main-section .header {
+  margin-bottom: 6.4rem;
+}
+
+.main-section .header strong {
+  color: var(--base-color);
+}
+
+@media (min-width: 1200px) {
+  .main-section {
+    padding: 16rem 0;
+  }
+
+  .main-section .header {
+    max-width: 53rem;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .main-section .main-title {
+    margin-bottom: 1.2rem;
+  }
+}

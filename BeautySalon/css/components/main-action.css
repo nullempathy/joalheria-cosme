@@ -1,0 +1,34 @@
+.main-action {
+  transition: color 0.3s;
+  position: relative;
+}
+
+.main-action:hover,
+.main-action.active {
+  color: var(--base-color);
+}
+
+.main-action::after {
+  content: "";
+  width: 0%;
+  height: 0.2rem;
+  background: var(--base-color);
+
+  position: absolute;
+  left: 0;
+  bottom: -2.4rem;
+
+  transition: width 0.3s;
+}
+
+.main-action:hover::after,
+.main-action.active::after {
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .main-action.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
+  }
+}

@@ -1,0 +1,41 @@
+.main-services .cards.grid-gap {
+  gap: 2.4rem;
+}
+
+.main-services .card {
+  padding: 5.8rem 3.2rem;
+  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.08);
+  border-radius: 0.4rem 0.4rem 0rem 0rem;
+  border-bottom: 0.4rem solid var(--base-color);
+  text-align: center;
+}
+
+.main-services .card .main-icon {
+  display: block;
+  margin-bottom: 2.4rem;
+  font-size: 8rem;
+}
+
+.main-services .card .main-title {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.main-services .card p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+@media (min-width: 1200px) {
+  .main-services .subtitle {
+    text-align: center;
+  }
+
+  .main-services .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .main-services .card {
+    padding-inline: 4.8rem;
+  }
+}

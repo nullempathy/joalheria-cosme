@@ -1,0 +1,25 @@
+.main-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--base-color);
+  color: var(--text-color-light);
+  padding: 1.8rem 3.2rem;
+  border-radius: 0.4rem;
+  font: 500 1.6rem var(--body-font);
+  transition: background 0.3s;
+}
+
+.main-button:hover {
+  background: var(--base-color-alt);
+}
+
+.main-button .main-icon {
+  color: var(--text-color-light);
+}
+
+@media (min-width: 1200px) {
+  .main-button {
+    padding: 1.8rem 3.6rem;
+  }
+}

@@ -1,0 +1,29 @@
+.main-contact .grid-gap {
+  gap: 6.4rem;
+}
+
+.main-contact .text .paragraph {
+  margin-bottom: 3.2rem;
+}
+
+.main-contact .list.grid-gap {
+  gap: 3.2rem;
+}
+
+.main-contact .list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .main-contact .main-container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .main-contact .text {
+    max-width: 40rem;
+  }
+}
