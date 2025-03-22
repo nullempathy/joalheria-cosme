@@ -1,0 +1,75 @@
+.upload-body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+#cadastro-joia {
+  max-width: 500px; /* Reduzi aproximadamente 200px do tamanho original */
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#cadastro-joia .form-field {
+  margin-bottom: 15px;
+}
+
+#cadastro-joia .form-label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-color, #333);
+}
+
+#cadastro-joia .form-input,  
+#cadastro-joia .form-textarea { /* Corrigido para afetar apenas os inputs dentro do form */
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f9f9f9;
+}
+
+#cadastro-joia .form-textarea {
+  resize: none;
+  height: 80px;
+}
+
+#cadastro-joia .form-submit {
+  text-align: center;
+}
+
+#cadastro-joia .main-button {
+  width: 100%;
+  padding: 10px;
+  background: #6ab090;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#cadastro-joia .main-button:hover {
+  background: #5a9b7c;
+}
+
+#preco::-webkit-inner-spin-button,
+#preco::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#preco {
+  -moz-appearance: textfield;
+}
+

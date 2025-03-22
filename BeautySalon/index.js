@@ -18,7 +18,6 @@ for (const link of links) {
 }
 
 /* mudar o header da página quando der scroll */
-
 const header = document.querySelector("#header");
 const navHeight = header.offsetHeight;
 function changeHeaderWhenScroll() {
@@ -30,22 +29,6 @@ function changeHeaderWhenScroll() {
     header.classList.remove("scroll");
   }
 }
-
-/* Testimonials carousel slider swiper */
-const swiper = new Swiper(".swiper", {
-  slidesPerView: 1,
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  mousewheel: true,
-  keyboard: true,
-  breakpoints: {
-    767: {
-      slidesPerView: 2,
-      setWrapperSize: true,
-    },
-  },
-});
 
 /* ScrollReveal: Mostrar elementos quando der scroll na página */
 const scrollReveal = ScrollReveal({
@@ -67,7 +50,6 @@ scrollReveal.reveal(
 );
 
 /* Botão voltar para o topo */
-
 const backToTopButton = document.querySelector(".main-backToTop");
 function backToTop() {
   if (window.scrollY >= 560) {
@@ -108,4 +90,117 @@ window.addEventListener("scroll", () => {
   changeHeaderWhenScroll();
   backToTop();
   activateMenuAtCurrentSection();
+});
+
+/* Redirecionar para Contact ao clicar num Card Service */
+document.getElementById('card-restoration').addEventListener('click', function() {
+  window.location.href = '#contact'; // Redireciona para a seção de contato
+});
+document.getElementById('card-cleaning').addEventListener('click', function() {
+  window.location.href = '#contact'; // Redireciona para a seção de contato
+});
+document.getElementById('card-budget').addEventListener('click', function() {
+  window.location.href = '#contact'; // Redireciona para a seção de contato
+});
+
+// Adiciona os cards e inicializa o Swiper
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const response = await fetch("/api/jewelry");
+    const jewelryList = await response.json();
+
+    if (jewelryList.length === 0) {
+      return;
+    }
+    
+    const section = document.querySelector(".main-section.main-jewelry");
+    if (section) {
+      section.classList.remove("no-jewelry");
+    }
+
+
+    const swiperWrapper = document.querySelector(".jewelry-swiper .swiper-wrapper");
+    if (!swiperWrapper) return;
+
+    // Adiciona os slides dinamicamente
+    jewelryList.forEach((jewel) => {
+      const jewelCard = document.createElement("div");
+      jewelCard.classList.add("jewel", "swiper-slide");
+
+      jewelCard.innerHTML = `
+        <div class="carousel-item">
+          <img src="/assets/jewelry/${jewel.image}" alt="joia">
+          <div class="jewel-description">
+            <p>${jewel.description}</p>
+          </div>
+          <div class="client-info" style="display: none;">
+            <div>
+              <img src="./assets/images/image1" alt="Foto do vendedor" />
+              <p class="client-name">Vendedor desconhecido</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-phone"></i>
+              <p class="client-phone">Número não informado</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-gem"></i>
+              <p class="jewel-price">R$ ${jewel.price.toFixed(2)}</p>
+            </div>
+          </div>
+          <div class="purchase-jewel">
+            <p class="contact-title">Contato</p>
+            <button class="buy-button main-button">Comprar</button>
+          </div>
+        </div>
+      `;
+
+      swiperWrapper.appendChild(jewelCard);
+    });
+
+    // Inicializa o Swiper
+    new Swiper(".jewelry-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 5,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      mousewheel: true,
+      keyboard: true,
+      breakpoints: {
+        767: {
+          slidesPerView: 2,
+          setWrapperSize: true,
+        },
+      },
+    });
+
+    // Change description / contact
+    const contactTitles = document.querySelectorAll(".contact-title");
+
+    contactTitles.forEach((title) => {
+      title.addEventListener("click", function () {
+        const jewelDescription = this.closest(".carousel-item").querySelector(".jewel-description");
+        const clientInfo = this.closest(".carousel-item").querySelector(".client-info");
+
+        if (clientInfo.style.display === "none" || clientInfo.style.display === "") {
+          // Exibir informações de contato e ocultar a descrição
+          clientInfo.style.display = "block";
+          jewelDescription.style.display = "none";
+          this.innerText = "Descrição"; // Alterar o texto do botão
+          this.classList.add("active-contact");
+        } else {
+          // Ocultar informações de contato e exibir a descrição novamente
+          clientInfo.style.display = "none";
+          jewelDescription.style.display = "block";
+          this.innerText = "Contato"; // Alterar o texto do botão
+          this.classList.remove("active-contact");
+        }
+      });
+    });
+
+  } catch (error) {
+    console.error("Erro ao carregar as joias:", error);
+  }
+
 });

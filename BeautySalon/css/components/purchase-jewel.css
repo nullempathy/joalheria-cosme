@@ -1,0 +1,10 @@
+.purchase-jewel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.purchase-jewel .main-button {
+  padding: 0.4rem 0.4rem;
+}

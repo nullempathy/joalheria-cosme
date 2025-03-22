@@ -8,6 +8,7 @@
   border-radius: 0.4rem;
   font: 500 1.6rem var(--body-font);
   transition: background 0.3s;
+  border-color: transparent;
 }
 
 .main-button:hover {

@@ -11,11 +11,13 @@
 @import "./components/main-image.css";
 @import "./components/main-button.css";
 @import "./components/main-divider.css";
-@import "./components/main-about.css";
 @import "./components/main-services.css";
-@import "./components/main-testimonials.css";
-@import "./components/main-blockquote.css";
+@import "./components/main-jewelry.css";
 @import "./components/main-contact.css";
 @import "./components/main-footer.css";
 @import "./components/main-backToTop.css";
 @import "./components/contact-form.css";
+@import "./components/carousel-item.css";
+@import "./components/upload.css";
+@import "./components/login.css";
+@import "./components/purchase-jewel.css";

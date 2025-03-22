@@ -1,0 +1,80 @@
+.carousel-item {
+  padding: 3.2rem;
+  box-shadow: 0rem 0rem 1.2rem rgba(0, 0, 0, 0.08);
+  border-radius: 0.4rem;
+  height: 50rem;
+  width: 100%;
+}
+.carousel-item img {
+  height: 28rem;
+}
+
+.carousel-item .client-info {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-style: normal;
+  margin-top: 2.4rem;
+}
+
+.jewel-description {
+  margin-top: 2.4rem;
+}
+
+.contact-title,
+.contact-title.active-contact {
+  color: var(--base-color-alt);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--base-color-alt);
+  transition: width 0.3s ease-in-out;
+}
+
+.contact-title.active-contact::after {
+  content: "";
+  position: absolute;
+  left: 0.3rem;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--base-color-alt);
+  transition: width 0.3s ease-in-out;
+}
+
+
+.contact-title:hover::after {
+  width: 100%;
+}
+
+.contact-title.active-contact:hover::after {
+  width: 100%;
+}
+
+.carousel-item .client-info div {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.carousel-item .client-info div i,
+.active-contact {
+  font-size: 1.6rem;
+  padding-left: 0.4rem;
+}
+
+.carousel-item .client-info img {
+  width: 3.2rem;
+  height: 3.2rem;
+  object-fit: cover;
+  clip-path: circle();
+}

@@ -1,0 +1,53 @@
+.main-jewelry {
+  background-color: white;
+}
+
+.main-jewelry.no-jewelry {
+  display: none;
+}
+
+.main-jewelry .main-container {
+  margin-inline: 0; 
+}
+
+.main-jewelry .header {
+  margin-inline: 2.4rem;
+  margin-bottom: 0;
+}
+
+.main-jewelry .main-title {
+  margin-bottom: 2.4rem;
+}
+
+.main-jewelry .jewelry {
+  height: auto;
+  padding: 6.4rem 1.6rem;
+}
+
+.main-jewelry .swiper-pagination {
+  position: relative; /* Em vez de absolute */
+  margin-top: 3rem; /* Ajuste conforme necessário */
+  z-index: 10; /* Garante que fique acima ou abaixo do necessário */
+}
+
+
+.main-jewelry .swiper-pagination-bullet {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.main-jewelry .swiper-pagination-bullet-active {
+  background-color: var(--base-color);
+}
+
+@media (min-width: 1200px) {
+  .main-jewelry .header {
+    max-width: 52rem;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .main-jewelry .main-container {
+    margin-inline: auto;
+  }
+}

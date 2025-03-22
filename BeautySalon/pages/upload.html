@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="upload-body">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Joias</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="upload-body">
+    <form id="cadastro-joia" class="contact-form" action="/cadastrar-joia" method="POST" enctype="multipart/form-data">
+        <h2>Cadastro de Joias</h2>
+            
+        <!-- Etapa 1: Dados da Joia -->
+        <div id="step-1">
+            <div class="form-field">
+                <label for="nome" class="form-label">Nome da Joia:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome da joia" required class="form-input">
+            </div>
+
+            <div class="form-field">
+                <label for="descricao" class="form-label">Descrição:</label>
+                <textarea id="descricao" name="descricao" rows="4" placeholder="Descreva a joia" required class="form-textarea" maxlength="251"></textarea>
+            </div>
+
+            <div class="form-field">
+                <label for="preco" class="form-label">Preço (R$):</label>
+                <input type="number" id="preco" name="preco" step="0.01" placeholder="Digite o preço" required class="form-input">
+            </div>
+
+            <div class="form-field">
+                <label for="imagem" class="form-label">Imagem da Joia:</label>
+                <input type="file" id="imagem" name="imagem" accept="image/*" required class="form-input">
+            </div>
+
+            <div class="form-submit">
+                <button type="button" id="next-step" class="main-button">Avançar</button>
+            </div>
+        </div>
+        
+        <!-- Etapa 2: Contato -->
+        <div id="step-2" style="display: none;">
+
+            <div class="form-field">
+                <label for="nome-contato" class="form-label">Seu Nome:</label>
+                <input type="text" id="nome-contato" name="nome-contato" placeholder="Seu nome completo" required class="form-input">
+            </div>
+
+            <div class="form-field">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Seu email" required class="form-input">
+            </div>
+
+            <div class="form-field">
+                <label for="telefone" class="form-label">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone" required class="form-input">
+            </div>
+
+            <div class="form-field">
+                <label for="foto-cliente" class="form-label">Sua Foto (opcional):</label>
+                <input type="file" id="foto-cliente" name="foto-cliente" accept="image/*" class="form-input">
+            </div>
+
+            <div class="form-submit">
+                <button type="button" id="prev-step" class="main-button">Voltar</button>
+                <button type="submit" id="submit-form" class="main-button">Cadastrar</button>
+            </div>
+        </div>
+
+    </form>
+    <script src="../scripts/form-handler.js"></script>
+</body>
+</html>

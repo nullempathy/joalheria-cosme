@@ -4,16 +4,13 @@
     <!-- PAGE INFO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BeautySalon</title>
+    <title>Prismajoias</title>
 
     <!-- ICONS -->
     <link rel="stylesheet" href="./assets/fonts/style.css" />
 
     <!-- SWIPER -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,7 +30,7 @@
     <header class="main-header" id="header">
       <nav class="main-nav main-container">
         <a class="main-logo" href="#home" lang="en">
-          beauty<span class="salon">salon</span>.
+          prisma<span class="salon">joias</span>.
         </a>
 
         <!-- menu -->
@@ -43,14 +40,11 @@
               <a class="main-action main-title" href="#home">Início</a>
             </li>
             <li>
-              <a class="main-action main-title" href="#about">Sobre</a>
-            </li>
-            <li>
               <a class="main-action main-title" href="#services">Serviços</a>
             </li>
             <li>
-              <a class="main-action main-title" href="#testimonials"
-                >Depoimentos</a
+              <a class="main-action main-title" href="#jewelry"
+                >Joias</a
               >
             </li>
             <li>
@@ -80,7 +74,7 @@
             <p class="paragraph">
               Dê uma nova vida às suas peças favoritas com nossos serviços especializados em restauração e limpeza de joias. Cuidamos de cada detalhe para preservar o valor e a beleza das suas joias preciosas.
             </p>
-            <a class="main-button" href="#">Solicitar Serviço</a>
+            <a class="main-button" href="#contact">Solicitar Serviço</a>
           </div>
         </div>
       </section>
@@ -93,27 +87,27 @@
           <header class="header">
             <h2 class="main-title">Serviços</h2>
             <p class="subtitle">
-              Com mais de 10 anos no mercado, o <strong>Beautysalon</strong> já
+              Com mais de 10 anos no mercado, o <strong>PrismaJoias</strong> já
               conquistou clientes de inúmeros países com seus tratamentos
               exclusivos e totalmente naturais
             </p>
           </header>
           <div class="cards grid-gap">
-            <div class="card">
+            <div class="card" id="card-restoration">
               <i class="main-icon fa-solid fa-hammer"></i>
               <h3 class="main-title">Restauração</h3>
               <p>
                 Seu colar, anel ou pulseira perdeu o brilho e apresenta sinais do tempo? Nossa equipe realiza uma restauração completa para devolver a elegância original de suas peças, mantendo toda a autenticidade e sofisticação.
               </p>
             </div>
-            <div class="card">
+            <div class="card" id="card-cleaning">
               <i class="main-icon fa-solid fa-hand-sparkles"></i>
               <h3 class="main-title">Limpeza Profissional</h3>
               <p>
                 Removemos impurezas e resquícios acumulados ao longo do tempo, recuperando o brilho e a beleza das suas joias com um processo seguro e eficiente.
               </p>
             </div>
-            <div class="card">
+            <div class="card" id="card-budget">
               <i class="main-icon fa-solid fa-sack-dollar"></i>
               <h3 class="main-title">Orçamento Personalizado</h3>
               <p>
@@ -125,6 +119,26 @@
       </section>
 
       <div class="main-divider -two"></div>
+
+      <!-- JEWELRY -->
+      <section class="main-section main-jewelry no-jewelry" id="jewelry">
+        <div class="main-container">
+          <header class="header">
+            <h2 class="main-title">Joias à vendas.</h2>
+          </header>
+           <!-- Contêiner do Swiper -->
+          <div class="jewelry-swiper swiper">
+            <!-- Wrapper do Swiper -->
+            <div class="swiper-wrapper">
+              <!-- Os slides serão adicionados via JavaScript -->
+            </div>
+            <!-- Paginação do Swiper -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="main-divider -one"></div>
 
       <!-- CONTACT -->
       <section class="main-section main-contact" id="contact">
@@ -173,16 +187,16 @@
         </div>
       </section>
 
-      <div class="main-divider -one"></div>
+      <div class="main-divider -two"></div>
     </main>
 
     <footer class="main-section main-footer">
       <div class="main-container grid-gap">
         <div class="brand">
           <a class="main-logo -alt" href="#home" lang="en">
-            beauty<span class="salon">salon</span>.
+            prisma<span class="salon">joias</span>.
           </a>
-          <p class="paragraph">©2025 Beautysalon.</p>
+          <p class="paragraph">©2025 PrismaJoias.</p>
           <p class="paragraph">Todos os direitos reservados.</p>
         </div>
         <div class="social">
@@ -204,7 +218,7 @@
     </a>
 
     <!-- SWIPER -->
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- SCROLLREVEAL -->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -212,6 +226,6 @@
     <!-- MAIN JS -->
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./index.js"></script>
-    <script src="./send-email.js"></script>
+    <script src="./scripts/send-email.js"></script>
   </body>
 </html>
